@@ -1,0 +1,24 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Teams - Valorant Esport{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Teams</h1>
+    <ul>
+        {% for team in teams %}
+            <li>
+                <h2>{{ team.name }}</h2>
+                <p>Founded: {{ team.founded }}</p>
+                <p>{{ team.description }}</p>
+                <h3>Players</h3>
+                <ul>
+                    {% for player in team.player_set.all %}
+                        <li>{{ player.name }} - {{ player.role }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
