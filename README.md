@@ -15,7 +15,7 @@ visuel à présenter. Néanmoins, devront être présent sur votre mini site les
 
 ### Contraintes
 
-- Etant donnée l'utilisation de Django, la fonction de connexion sécurisée à un espace d'administration
+- Etant donné l'utilisation de Django, la fonction de connexion sécurisée a un espace d'administration
 est déjà présente suite à la création d'un superuser.
 
-- Pour compenser, j'ai rajouter des fonctionnalités de type "blog" au site réalise.
+- Pour compenser, j'ai rajouté des fonctionnalités de type "blog" au site réalisé.
