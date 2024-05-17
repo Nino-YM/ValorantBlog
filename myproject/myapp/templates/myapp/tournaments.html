@@ -10,7 +10,13 @@
             <li>
                 <h2>{{ tournament.name }}</h2>
                 <p>Date: {{ tournament.date }}</p>
-                <p>Prize Pool: {{ tournament.prize_pool }}</p>
+                <p>Prize Pool: {{ tournament.prize_pool }} $</p>
+                <h3>Teams</h3>
+                <ul>
+                    {% for team in tournament.teams.all %}
+                        <li>{{ team.name }}</li>
+                    {% endfor %}
+                </ul>
             </li>
         {% endfor %}
     </ul>

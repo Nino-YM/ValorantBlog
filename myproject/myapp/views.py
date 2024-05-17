@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
-from .models import Article, Team, Tournament  # Assurez-vous d'importer Team et Tournament
+from .models import Article, Team, Tournament 
 from .forms import ArticleForm
 
 def home_view(request):

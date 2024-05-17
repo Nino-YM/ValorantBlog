@@ -20,6 +20,7 @@ class Tournament(models.Model):
     name = models.CharField(max_length=100)
     date = models.DateField()
     prize_pool = models.DecimalField(max_digits=10, decimal_places=2)
+    teams = models.ManyToManyField(Team, related_name='tournaments')
 
     def __str__(self):
         return self.name
