@@ -10,11 +10,16 @@ class Team(models.Model):
 
 class Player(models.Model):
     team = models.ForeignKey(Team, on_delete=models.CASCADE)
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)  # Full name
+    in_game_name = models.CharField(max_length=50)  # In-game name
     role = models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
+
+    def get_wiki_url(self):
+        base_url = "https://liquipedia.net/valorant/"
+        return base_url + self.in_game_name
 
 class Tournament(models.Model):
     name = models.CharField(max_length=100)

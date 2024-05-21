@@ -14,7 +14,9 @@
                 <h3>Players</h3>
                 <ul>
                     {% for player in team.player_set.all %}
-                        <li>{{ player.name }} - {{ player.role }}</li>
+                        <li>
+                            <a href="{{ player.get_wiki_url }}" target="_blank">{{ player.name }} - {{ player.role }}</a>
+                        </li>
                     {% endfor %}
                 </ul>
             </li>
